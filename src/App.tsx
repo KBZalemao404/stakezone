@@ -15,6 +15,10 @@ import { AccountPage } from './pages/Account'
 import { AuthPage } from './pages/Auth'
 import { TermsPage, PrivacyPage, ResponsibleGamingPage } from './pages/Legal'
 import { AdminPage } from './pages/Admin'
+import { ApiConfigPage } from './pages/ApiConfig'
+import { StandingsPage } from './pages/Standings'
+import { OddsComparisonPage } from './pages/OddsComparison'
+import { LiveScoresPage } from './pages/LiveScores'
 import { Button } from './components/ui'
 
 function ScrollToTop() {
@@ -48,6 +52,9 @@ export function App() {
           <Route path="/esportes" element={<SportsPage />} />
           <Route path="/apostas" element={<SportsPage />} />
           <Route path="/ao-vivo" element={<LivePage />} />
+          <Route path="/placares" element={<LiveScoresPage />} />
+          <Route path="/odds" element={<OddsComparisonPage />} />
+          <Route path="/classificacoes" element={<StandingsPage />} />
           <Route path="/loja" element={<StorePage />} />
           <Route path="/loja/favoritos" element={<FavoritesPage />} />
           <Route path="/loja/checkout" element={<CheckoutPage />} />
@@ -56,6 +63,7 @@ export function App() {
           <Route path="/promocoes" element={<PromotionsPage />} />
           <Route path="/carteira" element={<WalletPage />} />
           <Route path="/conta" element={<AccountPage />} />
+          <Route path="/apis" element={<ApiConfigPage />} />
           <Route path="/termos" element={<TermsPage />} />
           <Route path="/privacidade" element={<PrivacyPage />} />
           <Route path="/jogo-responsavel" element={<ResponsibleGamingPage />} />

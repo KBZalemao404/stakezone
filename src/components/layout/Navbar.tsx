@@ -11,7 +11,8 @@ import { Money } from '../ui'
 const links = [
   { to: '/esportes', label: 'Esportes' },
   { to: '/ao-vivo', label: 'Ao vivo' },
-  { to: '/apostas', label: 'Apostas' },
+  { to: '/odds', label: 'Odds' },
+  { to: '/classificacoes', label: 'Classificações' },
   { to: '/loja', label: 'Loja' },
   { to: '/promocoes', label: 'Promoções' },
 ]
@@ -94,6 +95,7 @@ export function Navbar() {
                 {[
                   { to: '/conta', icon: User, label: 'Minha conta' },
                   { to: '/carteira', icon: Wallet, label: 'Carteira' },
+                  { to: '/apis', icon: Settings, label: 'Configurar APIs' },
                   { to: '/conta#seguranca', icon: Settings, label: 'Segurança' },
                 ].map((i) => (
                   <Link key={i.label} to={i.to} className="sidebar-item" onClick={() => setProfileOpen(false)}>
@@ -159,9 +161,12 @@ export function SearchOverlay({ onClose }: { onClose: () => void }) {
     ...(q ? [
       { type: 'Partida', to: '/esportes', label: `Flamengo x Palmeiras — Brasileirão` },
       { type: 'Partida', to: '/ao-vivo', label: `Los Angeles Lakers x Golden State Warriors` },
+      { type: 'Odds', to: '/odds', label: `Comparar odds de apostas` },
+      { type: 'Classificação', to: '/classificacoes', label: `Brasileirão Série A` },
       { type: 'Produto', to: '/loja/p1', label: `Camisa Oficial StakeZone 2026` },
       { type: 'Produto', to: '/loja/p4', label: `Boné Edição Limitada Gold` },
       { type: 'Página', to: '/promocoes', label: `Bônus de Boas-Vindas 100%` },
+      { type: 'Config', to: '/apis', label: `Configurar APIs de dados` },
     ] : []).filter((r) => r.label.toLowerCase().includes(q.toLowerCase())),
   ]
 
